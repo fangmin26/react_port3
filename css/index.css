@@ -1,0 +1,437 @@
+@font-face {
+  font-family: 'Iropke Batang';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+       url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff) format('woff'),
+       url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf) format('truetype');
+}
+
+/*scroll*/
+#scroll{
+  position:fixed;
+  color:#fff;
+  font-size:30px;
+  text-align:center;
+  line-height:100px;
+  top: 50%;
+  transform:translateY(-50%);
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  background:rgba(0,0,0,0.5);
+}
+/*layout*/
+#header{
+  position:fixed;
+  z-index:1000;
+  top:0;
+  left:0;
+  width:100%;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  backdrop-filter: saturate(180%) blur(5px);
+}
+#contents{
+  width:100%;
+}
+#section1{
+  width:100%;
+  overflow-x:hidden;
+}
+#section2{
+  width:100%;
+}
+#footer{
+  width:100%;
+  background:#000;
+}
+
+/*container*/
+.container{
+  max-width:1400px;
+  width:100%;
+  margin:0 auto;
+}
+
+/*nav*/
+.nav{}
+.nav ul{
+  display:flex;
+  align-items:center;
+}
+.nav li{
+  border-right:1px solid rgb(232, 232, 232);
+  text-align:center;
+}
+.nav li a{
+  display:block;
+  font-family: 'Rajdhani';
+  font-size: 1.3rem;
+  font-weight: 100;
+  padding: 50px;
+  transition:all .3s ease;
+}
+.nav li a.shrink {
+  padding: 28px 50px;
+}
+.nav li.active a{
+  background:#000;
+  color:#fff;
+  position:relative;
+}
+.nav li.active a::before{
+  content: '';
+  width: 8px; height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.nav li:nth-of-type(1){
+  flex:1 1 20%; 
+  /*grow shrink basis,반응형에적합,1일 경우 텍스트포함 점유*/
+}
+
+.nav li:nth-of-type(1) a {
+  font-size: 3.2rem;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.nav li:nth-of-type(2){
+  flex:1 1 10%; 
+}
+
+.nav li:nth-of-type(3){
+  flex:1 1 10%; 
+}
+
+.nav li:nth-of-type(4){
+  flex:1 1 10%; 
+}
+
+.nav li:nth-of-type(5){
+  flex:1 1 10%; 
+}
+
+.nav li:nth-of-type(6){
+  flex:1 1 10%; 
+}
+
+.nav li:nth-of-type(7){
+  flex:1 1 20%; 
+}
+.nav li:nth-of-type(7) span{
+  display:inline-block;
+}
+.nav li:nth-of-type(7) span a{
+  display:inline-block;
+  font-family: 'Rajdhani';
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px;
+}
+/*sec1*/
+.sec1{
+  width:100%;
+  height:850px;
+  padding-top:250px;
+  position:relative;
+}
+.sec1 h2{
+  font-size:150px;
+  font-family: 'Rajdhani';
+  line-height:96.6%;
+  letter-spacing: -2px;
+  max-width:60%;
+  padding-bottom:45px;
+}
+.sec1 span{
+  position:absolute;
+  right:-100px;
+  display:block;
+  width:calc(78% + 100px);
+  height:1px;
+  background:#000;
+  animation:long 3s ease-in forwards;
+}
+@keyframes long{
+  0%{
+    width:0;
+  }
+  100%{
+    width:calc(78% + 100px);
+  }
+}
+.sec1 span::after{
+  content:'';
+  width:8px;
+  height:8px;
+  background:#000;
+  border-radius: 50%;
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+.sec1 h3{
+  position:absolute;
+  right:0;
+  display:block;
+  font-size:150px;
+  font-family: 'Raleway Dots';
+  line-height:96.6%;
+  letter-spacing: -2px;
+  width:78%;
+  padding-top:45px;
+}
+.sec1 h3 strong{
+  display:block;
+  width:100%;
+  font-weight:500;
+  text-align:left;
+}
+.sec1 h3 em{
+  display:block;
+  width:100%;
+  font-weight:500;
+  text-align: right;
+}
+
+/*sec2*/
+
+.sec2{
+  padding-bottom:260px;
+}
+.sec2 .index_tit{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
+.sec2 .index_tit li{
+  font-style:'Poppins';
+  font-weight:400;
+  font-size:18px;
+  flex:1 1 30%;
+}
+.sec2 .index_tit li:last-of-type{
+  text-align:right;
+}
+.sec2 .index_box{
+  width:100%;
+}
+.sec2 .index_box li{
+  width:100%;
+  border:1px solid #c4c4c4;
+  height:369px;
+  margin-bottom:5px;
+  overflow-x:hidden;
+}
+.sec2 .index_box li div{
+  height:100%;
+  padding:30px;
+  box-sizing:border-box;
+  position:relative;
+  display:flex;
+  align-items: center;
+}
+.sec2 .index_box li div h4{
+  font-size:150px;
+  /* font-family: 'Rajdhani'; */
+  letter-spacing: -2px;
+  display:none;
+}
+
+.sec2 .index_box li:nth-of-type(1) div h4{
+  font-family:'Raleway';
+  position:relative;
+}
+.sec2 .index_box li:nth-of-type(1).active div h4::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  border-left:2px solid #000;
+  background:#fff;
+  animation:typing1 1.5s steps(7) forwards;
+}
+@keyframes typing1{
+  0%{
+    left:0ch;
+  }
+  100%{
+    left:7ch;
+  }
+}
+
+.sec2 .index_box li:nth-of-type(2) div h4{
+  font-family:'Raleway dots'; 
+  position:relative;
+}
+.sec2 .index_box li:nth-of-type(2).active div h4::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  border-left:2px solid #000;
+  background:#fff;
+  animation:typing2 1.5s steps(11)forwards;
+}
+@keyframes typing2{
+  0%{
+    left:0ch;
+  }
+  100%{
+    left:11ch;
+  }
+}
+.sec2 .index_box li:nth-of-type(3) div h4{
+  font-family: 'Rajdhani';
+  position:relative;
+}
+.sec2 .index_box li:nth-of-type(3).active div h4::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  border-left:2px solid #000;
+  background:#fff;
+  animation:typing3 1.5s steps(11)forwards;
+}
+@keyframes typing3{
+  0%{
+    left:0ch;
+  }
+  100%{
+    left:11ch;
+  }
+}
+.sec2 .index_box li:nth-of-type(4) div h4{
+  font-family: 'Racing Sans One', cursive;
+  position:relative;
+}
+.sec2 .index_box li:nth-of-type(4).active div h4::after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  width:100%;
+  border-right:2px solid #000;
+  background:#fff;
+  animation:typing4 1.5s steps(11)forwards;
+}
+@keyframes typing4{
+  0%{
+    right:0ch;
+  }
+  100%{
+    right:11ch;
+  }
+}
+
+.sec2 .index_box li div.last{
+  justify-content: flex-end;
+}
+.sec2 .index_box li div.desc p{
+  font-weight:300;
+  font-family: 'Iropke Batang';
+  font-size: 1.2rem;
+  opacity:0;
+  transition:all ease 1s;
+}
+.sec2 .index_box li div span{
+  position:absolute;
+  display:block;
+  padding:20px 30px;
+  color:#c4c4c4;
+  font-style:'Poppins';
+  font-weight:300;
+}
+
+.sec2 .index_box li div span:nth-of-type(1){
+  top:0;
+  left:0;
+}
+.sec2 .index_box li div span:nth-of-type(2){
+  top:0;
+  right:0;
+}
+.sec2 .index_box li div span:nth-of-type(3){
+  bottom:0;
+  left:0;
+}
+.sec2 .index_box li div span:nth-of-type(4){
+  bottom:0;
+  right:0;
+}
+
+/*footer*/
+.footer{
+  height:180px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position:relative;
+}
+
+.footer .study{
+  display:flex;
+}
+.footer .study li{
+  padding:0 20px;
+}
+.footer .study li a{
+  display:block;
+  color:#fff;
+  font-family: 'Rajdhani'; 
+  font-weight:300;
+  font-size:18px;
+  position:relative;
+
+}
+.footer .study li:hover a::after{
+  display:block;
+  content:'';
+  background:#fff;
+  width:100%;
+  height:2px;
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+}
+.footer span{
+  color:#fff;
+  font-family: 'Rajdhani'; 
+  font-weight:300;
+  font-size:18px;
+}
+.footer span.IMG{
+  position:absolute;
+  top:-144px;
+  left:50%;
+  transform:translateX(-50%);
+  width:288px;
+  height:288px;
+  border-radius: 50%;
+  background:url(../img/profile3.jpg)no-repeat center center;
+  background-size: cover;
+	animation: flip 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+}
+/* @keyframes flip{
+  0% {
+   transform: rotateX(0);
+  }
+  100% {
+  transform: rotateX(-180deg);
+  }
+} */
